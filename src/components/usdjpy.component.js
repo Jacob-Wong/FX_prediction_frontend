@@ -124,7 +124,7 @@ export default class EURUSD extends Component {
           <Container>
             <Row>
               <Col class="col-sm">
-                <Card style={{ width: "25rem" }}>
+                <Card style={{ width: "18rem" }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Daily</Card.Title>
@@ -145,7 +145,7 @@ export default class EURUSD extends Component {
                 </Card>
               </Col>
               <Col class="col-sm">
-                <Card style={{ width: "25rem" }}>
+                <Card style={{ width: "18rem" }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Weekly</Card.Title>
