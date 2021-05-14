@@ -78,7 +78,7 @@ export default class EURUSD extends Component {
                     <Card.Title>Daily - USD/JPY</Card.Title>
                     <Card.Text>
                       Predict Close Price on
-                      <br /> {daily.predicting_date}
+                      <br /> <b>{daily.predicting_date}</b>
                     </Card.Text>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
@@ -105,7 +105,7 @@ export default class EURUSD extends Component {
                     <Card.Title>Weekly - USD/JPY</Card.Title>
                     <Card.Text>
                       Predict CLose Price on
-                      <br /> {weekly.predicting_date}
+                      <br /> <b>{weekly.predicting_date}</b>
                     </Card.Text>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
