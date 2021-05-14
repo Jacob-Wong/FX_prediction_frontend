@@ -17,7 +17,7 @@ export default class EURUSD extends Component {
         trend: "Loading...",
         action: "Loading...",
         color: "",
-        predicting_date: "",
+        predicting_date: "Loading...",
       },
       weekly: {
         start_date: "Loading...",
@@ -26,7 +26,7 @@ export default class EURUSD extends Component {
         trend: "Loading...",
         action: "Loading...",
         color: "",
-        predicting_date: "",
+        predicting_date: "Loading...",
       },
     };
   }
@@ -75,8 +75,11 @@ export default class EURUSD extends Component {
                 <Card style={{ width: "20rem", "border-color": daily.color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
-                    <Card.Title>Daily</Card.Title>
-                    <Card.Text>Prediction of USD/JPY Daily.</Card.Text>
+                    <Card.Title>Daily - USD/JPY</Card.Title>
+                    <Card.Text>
+                      Predict Close Price on
+                      <br /> {daily.predicting_date}
+                    </Card.Text>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
                     <ListGroupItem>
@@ -99,8 +102,11 @@ export default class EURUSD extends Component {
                 <Card style={{ width: "20rem", "border-color": daily.color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
-                    <Card.Title>Weekly</Card.Title>
-                    <Card.Text>Prediction of USD/JPY Weekly.</Card.Text>
+                    <Card.Title>Weekly - USD/JPY</Card.Title>
+                    <Card.Text>
+                      Predict CLose Price on
+                      <br /> {weekly.predicting_date}
+                    </Card.Text>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
                     <ListGroupItem>
