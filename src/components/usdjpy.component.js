@@ -17,6 +17,7 @@ export default class EURUSD extends Component {
         trend: "Loading...",
         action: "Loading...",
         color: "",
+        predicting_date: "",
       },
       weekly: {
         start_date: "Loading...",
@@ -25,6 +26,7 @@ export default class EURUSD extends Component {
         trend: "Loading...",
         action: "Loading...",
         color: "",
+        predicting_date: "",
       },
     };
   }
@@ -65,11 +67,12 @@ export default class EURUSD extends Component {
 
     return (
       <div>
+        <br />
         <center>
           <Container>
             <Row>
               <Col class="col-sm">
-                <Card style={{ width: "20rem", "border-color": color }}>
+                <Card style={{ width: "20rem", "border-color": daily.color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Daily</Card.Title>
@@ -80,7 +83,7 @@ export default class EURUSD extends Component {
                       Prediction: {daily.prediction}
                     </ListGroupItem>
                     <ListGroupItem>Trend: {daily.trend}</ListGroupItem>
-                    <ListGroupItem style={{ color: color }}>
+                    <ListGroupItem style={{ color: daily.color }}>
                       Action: {daily.action}
                     </ListGroupItem>
                   </ListGroup>
@@ -93,7 +96,7 @@ export default class EURUSD extends Component {
                 <br />
               </Col>
               <Col class="col-sm">
-                <Card style={{ width: "20rem" }} bg={"primart"}>
+                <Card style={{ width: "20rem", "border-color": daily.color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Weekly</Card.Title>
@@ -104,7 +107,9 @@ export default class EURUSD extends Component {
                       Prediction: {weekly.prediction}
                     </ListGroupItem>
                     <ListGroupItem>Trend: {weekly.trend}</ListGroupItem>
-                    <ListGroupItem>Action: {weekly.action}</ListGroupItem>
+                    <ListGroupItem style={{ color: daily.color }}>
+                      Action: {weekly.action}
+                    </ListGroupItem>
                   </ListGroup>
                   <Card.Footer>
                     <small className="text-muted">
@@ -116,6 +121,7 @@ export default class EURUSD extends Component {
             </Row>
           </Container>
         </center>
+        <br />
       </div>
     );
   }
