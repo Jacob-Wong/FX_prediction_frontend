@@ -1,12 +1,5 @@
 import React, { Component } from "react";
 import ForexDataService from "../services/forex.service";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 import Card from "react-bootstrap/Card";
 import { ListGroup, ListGroupItem, Container, Col, Row } from "reactstrap";
 
@@ -23,6 +16,7 @@ export default class EURUSD extends Component {
         prediction: "Loading...",
         trend: "Loading...",
         action: "Loading...",
+        color: "",
       },
       weekly: {
         start_date: "Loading...",
@@ -30,6 +24,7 @@ export default class EURUSD extends Component {
         prediction: "Loading...",
         trend: "Loading...",
         action: "Loading...",
+        color: "",
       },
     };
   }
@@ -66,65 +61,15 @@ export default class EURUSD extends Component {
   }
 
   render() {
-    const { daily, weekly } = this.state;
+    const { daily, weekly, color } = this.state;
 
     return (
       <div>
         <center>
-          <TableContainer component={Paper}>
-            <Table className="eurusd.table" aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>
-                    <b>EURUSD</b>
-                  </TableCell>
-                  <TableCell align="right">
-                    <b>Last Date</b>
-                  </TableCell>
-                  {/* <TableCell align="right">
-                  <b>Last Price</b>
-                </TableCell> */}
-                  <TableCell align="right">
-                    <b>Predict</b>
-                  </TableCell>
-                  <TableCell align="right">
-                    <b>Trend</b>
-                  </TableCell>
-                  <TableCell align="right">
-                    <b>Action</b>
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow key="daily">
-                  <TableCell component="th" scope="row">
-                    <b>Daily</b>
-                  </TableCell>
-                  <TableCell align="right">{daily.end_date}</TableCell>
-                  {/* <TableCell align="right">{daily.last_price}</TableCell> */}
-                  <TableCell align="right">{daily.prediction}</TableCell>
-                  <TableCell align="right">{daily.trend}</TableCell>
-                  <TableCell align="right">{daily.action}</TableCell>
-                </TableRow>
-                <TableRow key="weekly">
-                  <TableCell component="th" scope="row">
-                    <b>Weekly</b>
-                  </TableCell>
-                  <TableCell align="right">{weekly.end_date}</TableCell>
-                  {/* <TableCell align="right">{weekly.last_price}</TableCell> */}
-                  <TableCell align="right">{weekly.prediction}</TableCell>
-                  <TableCell align="right">{weekly.trend}</TableCell>
-                  <TableCell align="right">{weekly.action}</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <br />
-
           <Container>
             <Row>
               <Col class="col-sm">
-                <Card style={{ width: "20rem" }}>
+                <Card style={{ width: "20rem", "border-color": color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Daily</Card.Title>
@@ -135,7 +80,9 @@ export default class EURUSD extends Component {
                       Prediction: {daily.prediction}
                     </ListGroupItem>
                     <ListGroupItem>Trend: {daily.trend}</ListGroupItem>
-                    <ListGroupItem>Action: {daily.action}</ListGroupItem>
+                    <ListGroupItem style={{ color: color }}>
+                      Action: {daily.action}
+                    </ListGroupItem>
                   </ListGroup>
                   <Card.Footer>
                     <small className="text-muted">
@@ -146,7 +93,7 @@ export default class EURUSD extends Component {
                 <br />
               </Col>
               <Col class="col-sm">
-                <Card style={{ width: "20rem" }}>
+                <Card style={{ width: "20rem" }} bg={"primart"}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Weekly</Card.Title>
