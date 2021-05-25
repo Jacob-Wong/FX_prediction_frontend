@@ -64,6 +64,8 @@ export default class EURUSD extends Component {
 
   render() {
     const { daily, weekly } = this.state;
+    console.log(daily);
+    console.log(weekly);
 
     return (
       <div>
