@@ -63,7 +63,7 @@ export default class EURUSD extends Component {
   }
 
   render() {
-    const { daily, weekly, color } = this.state;
+    const { daily, weekly } = this.state;
 
     return (
       <div>
@@ -99,7 +99,7 @@ export default class EURUSD extends Component {
                 <br />
               </Col>
               <Col class="col-sm">
-                <Card style={{ width: "20rem", "border-color": daily.color }}>
+                <Card style={{ width: "20rem", "border-color": weekly.color }}>
                   {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
                   <Card.Body>
                     <Card.Title>Weekly - USD/JPY</Card.Title>
@@ -113,7 +113,7 @@ export default class EURUSD extends Component {
                       Prediction: {weekly.prediction}
                     </ListGroupItem>
                     <ListGroupItem>Trend: {weekly.trend}</ListGroupItem>
-                    <ListGroupItem style={{ color: daily.color }}>
+                    <ListGroupItem style={{ color: weekly.color }}>
                       Action: {weekly.action}
                     </ListGroupItem>
                   </ListGroup>
