@@ -106,7 +106,7 @@ export default class EURUSD extends Component {
                   <Card.Body>
                     <Card.Title>Weekly - USD/JPY</Card.Title>
                     <Card.Text>
-                      Predict CLose Price on
+                      Predict Close Price on
                       <br /> <b>{weekly.predicting_date}</b>
                     </Card.Text>
                   </Card.Body>
