@@ -1,4 +1,5 @@
-https://fyp-frontend-react.herokuapp.com/
+Backend API:
+https://github.com/Jacob-Wong/FX_prediction_API
 
 # Getting Started with Create React App
 
